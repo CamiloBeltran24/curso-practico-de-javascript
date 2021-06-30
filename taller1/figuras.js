@@ -1,5 +1,5 @@
 //Codigo del cuadrado
-console.group("Cuadrados");
+// console.group("Cuadrados");
 // const ladoCuadrado = 5;
 // console.log("Los lados del cuadrado miden: " + ladoCuadrado + " cm");
 
@@ -15,7 +15,7 @@ function areaCuadrada(lado) {
   return lado * lado;
 }
 // console.log("El area del cuadrado es: " + areaCuadrada(ladoCuadrado) + " cm^2");
-console.groupEnd();
+// console.groupEnd();
 
 //Codigo del triangulo
 // console.group("Triangulo");
@@ -52,10 +52,10 @@ function areaTriangulo(base, altura) {
 //     areaTriangulo(baseTriangulo, alturaTriangulo) +
 //     " cm"
 // );
-console.groupEnd();
+// console.groupEnd();
 
 //Codigo del circulo
-console.group("Circulos");
+// console.group("Circulos");
 // const radioCirculo = 4;
 function diametroCirculo(radio) {
   return radio * 2;
@@ -161,3 +161,67 @@ function calcularAreaCirculo() {
       " \nRecuerda agregar la unidad de medida correspondiente"
   );
 }
+
+// Codigo Triangulo Isoceles
+function ladosIguales(lado1, lado2) {
+  if (lado1 === lado2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.group("TRIANGULO ISOCELES \n  Perimetro");
+function altura(a, b) {
+  const a2 = a * a;
+  const b2 = b * b;
+  let h = a2 - b2 / 4;
+  console.log("h sin raiz: " + h);
+  h = Math.sqrt(h);
+  console.log(typeof h);
+  console.log("raiz de h: " + h);
+  console.log("La altura del truangulo es: " + h);
+  return h;
+}
+function calcularPerimetroIsoceles() {
+  const input1 = document.getElementById("InputIsoceles1");
+  const input2 = document.getElementById("InputIsoceles2");
+  const input3 = document.getElementById("InputIsoceles3");
+  const value1 = parseFloat(input1.value);
+  const value2 = parseFloat(input2.value);
+  const value3 = parseFloat(input3.value);
+  const perimetro = value1 + value2 + value3;
+  console.log("Lado1: " + typeof value1);
+  console.log("Lado2: " + typeof value2);
+  console.log("Base: " + typeof value3);
+  if (ladosIguales(value1, value2)) {
+    alert(
+      "EL perimetro del triangulo isoceles es: " +
+        perimetro +
+        " \nRecuerda agregar la unidad de medida correspondiente"
+    );
+  } else {
+    alert("Los lados del tringulo NO son iguales. \nIntente de nuevo.");
+  }
+}
+function calcularAreaIsoceles() {
+  const input1 = document.getElementById("InputIsoceles1");
+  const input2 = document.getElementById("InputIsoceles2");
+  const input3 = document.getElementById("InputIsoceles3");
+  const value1 = parseFloat(input1.value);
+  const value2 = parseFloat(input2.value);
+  const value3 = parseFloat(input3.value);
+  if (ladosIguales(value1, value2)) {
+    const b = value3;
+    const a2 = value1 * value1;
+    const b2 = b * b;
+    const area = (b * Math.sqrt(a2 - b2 / 4)) / 2;
+    alert(
+      "El area del triangulo Isoceles es: " +
+        area +
+        " \nRecuerda agregar la unidad de medida correspondiente"
+    );
+  } else {
+    alert("Los lados del tringulo NO son iguales. \nIntente de nuevo.");
+  }
+}
+console.groupEnd();
