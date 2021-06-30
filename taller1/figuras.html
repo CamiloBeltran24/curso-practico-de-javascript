@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figuras Geometricas en JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Calculadora De Figuras Geometricas</h1>
+      <img src="./img/geometric.svg" alt="imagen de figuras geometricas" />
+    </header>
+    <section>
+      <p class="section__text">
+        Todo los resultados se mostraran mediante mensajes de alerta.
+      </p>
+      <div class="box">
+        <h2>Calcula el area y perimetro de un cuadrado</h2>
+        <form action="">
+          <label for="InputCuadrado"
+            >Escribe cuanto mide cada lado de tu cuadrado:
+          </label>
+          <input type="number" id="InputCuadrado" placeholder="Lado" />
+          <div class="buttons">
+            <button type="button" onclick="calcularPerimetroCuadrado()">
+              Calcular Perimetro
+            </button>
+            <button type="button" onclick="calcularAreaCuadrada()">
+              Calcular Area
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="box">
+        <h2>Calcula el area y perimetro de un triangulo</h2>
+        <form action="">
+          <label for="InputCuadrado"
+            >Escribe cuanto mide cada lado y base de tu triangulo:
+          </label>
+          <input type="number" id="InputCuadrado" placeholder="Lado 1" />
+          <input type="number" id="InputCuadrado" placeholder="Lado 2" />
+          <input type="number" id="InputCuadrado" placeholder="base" />
+          <div class="buttons">
+            <button type="button" onclick="calcularPerimetroCuadrado()">
+              Calcular Perimetro
+            </button>
+            <button type="button" onclick="calcularAreaCuadrada()">
+              Calcular Area
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="box">
+        <h2>Calcula el diametro, perimetro y area de un Circulo</h2>
+        <form action="">
+          <label for="InputCuadrado"
+            >Escribe cuanto mide el radio de tu circunferencia:
+          </label>
+          <input type="number" id="InputCuadrado" placeholder="Radio" />
+          <div class="buttons">
+            <button type="button" onclick="calcularPerimetroCuadrado()">
+              Calcular Diametro
+            </button>
+            <button type="button" onclick="calcularPerimetroCuadrado()">
+              Calcular Perimetro
+            </button>
+            <button type="button" onclick="calcularAreaCuadrada()">
+              Calcular Area
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="box">
+        <h2>Calcula el area y perimetro de un triangulo Isoceles</h2>
+        <form action="">
+          <label for="InputCuadrado"
+            >Escribe cuanto mide cada lado de tu cuadrado:
+          </label>
+          <input type="number" id="InputCuadrado" placeholder="Lado1" />
+          <input type="number" id="InputCuadrado" placeholder="Lado2" />
+          <input type="number" id="InputCuadrado" placeholder="Base" />
+          <div class="buttons">
+            <button type="button" onclick="calcularPerimetroCuadrado()">
+              Calcular Perimetro
+            </button>
+            <button type="button" onclick="calcularAreaCuadrada()">
+              Calcular Area
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="attributtion">
+      <p>
+        Desarrollado por
+        <a href="https://twitter.com/CamiloBeltran" target="_blanck"
+          >@CamiloBeltran</a
+        >
+      </p>
+      <img src="./img/Mi-logo-blue.svg" alt="Logo de CambelDev" />
+    </section>
+    <script src="./figuras.js"></script>
+  </body>
+</html>
