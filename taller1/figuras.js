@@ -60,8 +60,8 @@ console.group("Circulos");
 function diametroCirculo(radio) {
   return radio * 2;
 }
-function perimetroCirculo() {
-  return diametroCirculo(4) * Math.PI;
+function perimetroCirculo(radio) {
+  return diametroCirculo(radio) * Math.PI;
 }
 function areaCirculo(radio) {
   return radio * radio * Math.PI;
@@ -79,5 +79,85 @@ function calcularPerimetroCuadrado() {
   const input = document.getElementById("InputCuadrado");
   const value = input.value;
   const perimetro = perimetroCuadrado(value);
-  alert("El perimetro del cuadrado mide: " + perimetro + " cm ");
+  alert(
+    "El Perimetro del cuadrado es de: " +
+      perimetro +
+      " \nRecuerda agregar la unidad de medida correspondiente"
+  );
+}
+function calcularAreaCuadrada() {
+  const input = document.getElementById("InputCuadrado");
+  const value = input.value;
+  const area = areaCuadrada(value);
+  alert(
+    "El area del cuadrado es de: " +
+      area +
+      " \nRecuerda agregar la unidad de medida correspondiente"
+  );
+}
+function calcularPerimetroTriangulo() {
+  const input = document.getElementById("InputTriangulo1");
+  const input2 = document.getElementById("InputTriangulo2");
+  const input3 = document.getElementById("InputTriangulo3");
+  const value1 = parseFloat(input.value);
+  const value2 = parseFloat(input2.value);
+  const value3 = parseFloat(input3.value);
+  const perimetro = perimetroTriangulo(value1, value2, value3);
+  alert(
+    "El Perimetro del triangulo es: " +
+      perimetro +
+      " \nRecuerda agregar la unidad de medida correspondiente"
+  );
+}
+function calcularAreaTriangulo() {
+  const input = document.getElementById("InputTriangulo1");
+  const input2 = document.getElementById("InputTriangulo2");
+  const input3 = document.getElementById("InputTriangulo3");
+  const value1 = parseInt(input.value);
+  const value2 = parseInt(input2.value);
+  const value3 = parseInt(input3.value);
+
+  if (value1 == value2) {
+    const area = areaTriangulo(value3, value1);
+    alert(
+      "El area del triangulo es: " +
+        area +
+        " \nRecuerda agregar la unidad de medida correspondiente"
+    );
+  } else {
+    alert(
+      "Los lados deben ser iguales, de lo contrario vaya a triangulo isoceles"
+    );
+  }
+}
+function calcularDiametroCirculo() {
+  const input = document.getElementById("InputCirculo");
+  const value = input.value;
+  const diametro = diametroCirculo(value);
+  alert(
+    "El diametro de la circunferencia es: " +
+      diametro +
+      " \nRecuerda agregar la unidad de medida correspondiente"
+  );
+}
+
+function calcularPerimetroCirculo() {
+  const input = document.getElementById("InputCirculo");
+  const value = input.value;
+  const perimetro = perimetroCirculo(value);
+  alert(
+    "El perimetro de la ciurcunferencia es: " +
+      perimetro +
+      " \nRecuerda agregar la unidad de medida correspondiente"
+  );
+}
+function calcularAreaCirculo() {
+  const input = document.getElementById("InputCirculo");
+  const value = input.value;
+  const area = areaCirculo(value);
+  alert(
+    "El area del circulo es: " +
+      area +
+      " \nRecuerda agregar la unidad de medida correspondiente"
+  );
 }
